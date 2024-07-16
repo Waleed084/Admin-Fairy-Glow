@@ -8,18 +8,14 @@ import Loadable from 'ui-component/Loadable';
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
 
 // Payment routing
-const TraningBonus = Loadable(lazy(() => import('views/pages/TrainingBonus')));
-const Invest = Loadable(lazy(() => import('views/pages/Invest')));
-const WithDraw = Loadable(lazy(() => import('views/pages/WithDraw')));
-const MoneyTransfer = Loadable(lazy(() => import('views/pages/MoneyTransfer')));
+const TrainingBonusApproval = Loadable(lazy(() => import('views/pages/TrainingBonusApproval')));
+const ReferenceApproval = Loadable(lazy(() => import('views/pages/ReferenceApproval')));
 // Transaction routing
-const AllTransaction = Loadable(lazy(() => import('views/utilities/AllTransaction')));
-const DepositHistory = Loadable(lazy(() => import('views/utilities/DepositHistory')));
-const WithdrawHistory = Loadable(lazy(() => import('views/utilities/WithdrawHistory')));
-const TrainingBonusHistory = Loadable(lazy(() => import('views/utilities/TrainingBonusHistory')));
-const InvestmentHistory = Loadable(lazy(() => import('views/utilities/InvestmentHistory')));
-const UtilsMaterialIcons = Loadable(lazy(() => import('views/utilities/MaterialIcons')));
-const UtilsTablerIcons = Loadable(lazy(() => import('views/utilities/TablerIcons')));
+const ReferenceBonusApproved = Loadable(lazy(() => import('views/utilities/ReferenceBonusApproved')));
+const TrainingBonusApproved = Loadable(lazy(() => import('views/utilities/TrainingBonusApproved')));
+//User Routes
+const ActiveUsers = Loadable(lazy(() => import('views/user/ActiveUsers')));
+const AddUser = Loadable(lazy(() => import('views/user/AddUser')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -41,86 +37,51 @@ const MainRoutes = {
       ]
     },
     {
-      path: 'Transactions',
+      path: 'Approved',
       children: [
         {
-          path: 'all-transactions',
-          element: <AllTransaction />
+          path: 'Training-bonus',
+          element: <TrainingBonusApproved />
         }
       ]
     },
     {
-      path: 'Transactions',
+      path: 'Approved',
       children: [
         {
-          path: 'deposit-history',
-          element: <DepositHistory />
+          path: 'Referral-Bonus',
+          element: <ReferenceBonusApproved />
         }
       ]
     },
     {
-      path: 'Transactions',
+      path: 'users',
       children: [
         {
-          path: 'withdraw-history',
-          element: <WithdrawHistory />
+          path: 'active-users',
+          element: <ActiveUsers />
         }
       ]
     },
     {
-      path: 'Transactions',
+      path: 'users',
       children: [
         {
-          path: 'training-bonus-history',
-          element: <TrainingBonusHistory />
+          path: 'add-user',
+          element: <AddUser />
         }
       ]
     },
     {
-      path: 'Transactions',
+      path: 'approval',
       children: [
         {
-          path: 'investment-history',
-          element: <InvestmentHistory />
-        }
-      ]
-    },
-    {
-      path: 'icons',
-      children: [
-        {
-          path: 'tabler-icons',
-          element: <UtilsTablerIcons />
-        }
-      ]
-    },
-    {
-      path: 'icons',
-      children: [
-        {
-          path: 'material-icons',
-          element: <UtilsMaterialIcons />
-        }
-      ]
-    },
-    {
-      path: 'payments',
-      children: [
-        {
-          path: 'training-bonus',
-          element: <TraningBonus />
+          path: 'training-bonus-approval',
+          element: <TrainingBonusApproval />
         },
         {
-          path: 'invest',
-          element: <Invest />
-        },
-        {
-          path: 'withdraw',
-          element: <WithDraw />
-        },
-        {
-          path: 'money-transfer',
-          element: <MoneyTransfer />
+          path: 'reference-approval',
+          element: <ReferenceApproval />
         }
       ]
     }

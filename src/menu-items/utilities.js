@@ -1,59 +1,32 @@
 // Icon assets
-import { IconCashRegister, IconCreditCardRefund, IconCreditCardPay, IconChartHistogram } from '@tabler/icons-react';
+import { IconCircleDashedCheck } from '@tabler/icons-react';
 
 // constant
 const icons = {
-  IconCashRegister,
-  IconCreditCardRefund,
-  IconCreditCardPay,
-  IconChartHistogram
+  IconCircleDashedCheck
 };
 
 // ==============================|| UTILITIES MENU ITEMS ||============================== //
 
 const utilities = {
-  id: 'Transaction',
-  title: 'Transaction',
+  id: 'Approved',
+  title: 'Approved',
   type: 'group',
   children: [
     {
-      id: 'All Transactions',
-      title: 'All Transactions',
+      id: 'Training Bonus Approved',
+      title: 'Training Bonus',
       type: 'item',
-      url: '/Transactions/all-transactions',
-      icon: icons.IconCashRegister,
+      url: '/Approved/Training-bonus',
+      icon: icons.IconCircleDashedCheck,
       breadcrumbs: false
     },
     {
-      id: 'Deposit History',
-      title: 'Deposit History',
+      id: 'Referral Payment Approved',
+      title: 'Referral Payment',
       type: 'item',
-      url: '/Transactions/deposit-history',
-      icon: icons.IconCreditCardRefund,
-      breadcrumbs: false
-    },
-    {
-      id: 'Withdraw History',
-      title: 'Withdraw History',
-      type: 'item',
-      url: '/Transactions/withdraw-history',
-      icon: icons.IconCreditCardPay,
-      breadcrumbs: false
-    },
-    {
-      id: 'Training Bonus History',
-      title: 'Training Bonus History',
-      type: 'item',
-      url: '/Transactions/training-bonus-history',
-      icon: icons.IconChartHistogram,
-      breadcrumbs: false
-    },
-    {
-      id: 'Investment History',
-      title: 'Investment History',
-      type: 'item',
-      url: '/Transactions/investment-history',
-      icon: icons.IconChartHistogram,
+      url: '/Approved/Referral-Bonus',
+      icon: icons.IconCircleDashedCheck,
       breadcrumbs: false
     }
   ]

@@ -1,48 +1,31 @@
 // assets
-import { IconUserPlus, IconBusinessplan, IconDeviceTabletUp, IconSend2 } from '@tabler/icons-react';
+import { IconCalendarClock } from '@tabler/icons-react';
 
 // constant
 const icons = {
-  IconUserPlus,
-  IconBusinessplan,
-  IconDeviceTabletUp,
-  IconSend2
+  IconCalendarClock
 };
 
 // ==============================|| EXTRA PAGES MENU ITEMS ||============================== //
 
 const pages = {
   id: 'pages',
-  title: 'Payments',
+  title: 'Pending Approvals',
   type: 'group',
   children: [
     {
       id: 'Training Bonus',
       title: 'Training Bonus',
       type: 'item',
-      url: '/payments/training-bonus',
-      icon: icons.IconUserPlus
+      url: '/approval/training-bonus-approval',
+      icon: icons.IconCalendarClock
     },
     {
-      id: 'Invest Now',
-      title: 'Invest Now',
+      id: 'Referral Payment',
+      title: 'Referral Payment',
       type: 'item',
-      url: '/payments/invest',
-      icon: icons.IconBusinessplan
-    },
-    {
-      id: 'Withdraw',
-      title: 'Withdraw',
-      type: 'item',
-      url: '/payments/withdraw',
-      icon: icons.IconDeviceTabletUp
-    },
-    {
-      id: 'Money Transfer',
-      title: 'Money Transfer',
-      type: 'item',
-      url: '/payments/money-transfer',
-      icon: icons.IconSend2
+      url: '/approval/reference-approval',
+      icon: icons.IconCalendarClock
     }
   ]
 };
