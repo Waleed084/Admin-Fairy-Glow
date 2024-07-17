@@ -59,7 +59,15 @@ const userSchema = new mongoose.Schema(
       unique: true,
       trim: true
     },
+    phoneNumber: {
+      type: String,
+      required: true
+    },
     balance: {
+      type: Number,
+      default: 0
+    },
+    advancePoints: {
       type: Number,
       default: 0
     },
@@ -441,7 +449,7 @@ app.post('/api/approvals/referral/approve', async (req, res) => {
       refPer: approval.refPer,
       refParentPer: approval.refParentPer,
       referrerPin: approval.referrerPin,
-      referrerId: user.parent
+      referrerId: user.id
     });
     await userPendingRecord.save();
 
