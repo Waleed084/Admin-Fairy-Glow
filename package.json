@@ -1,8 +1,8 @@
 {
-  "name": "berry-free-material-react-cra",
+  "name": "FairyGlow Admin",
   "version": "3.3.2",
   "private": true,
-  "homepage": "https://berrydashboard.io",
+  "homepage": "https://admin.fairyglow.org/dasboard/default",
   "proxy": "http://localhost:6000/",
   "dependencies": {
     "@emotion/cache": "^11.9.3",
